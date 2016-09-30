@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+	<title>Dreamcatcher / Smag0 Socket.IO</title>
+	<!-- GENERAL LIBRAIRIES -->       
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		var host = window.document.location.host;
+		var socket = io(host);
+		socket.on('connect', function(){
+			console.log("connecte");
+		});
+		socket.on('event', function(data){
+			console.log(data);
+		});
+		socket.on('disconnect', function(){
+			console.log("deconnecte");
+		});
+		console.log(socket);
+	</script>
+</head>
+<body>
+	Version avec Socket
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "smag0uiserver",
+  "version": "1.0.0",
+  "description": "un serveur de base pour le projet Smag0, sur lequel on greffe les modules qui nous intéressent, Thérèse.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scenaristeur/smag0UiServer.git"
+  },
+  "keywords": [
+    "smag0",
+    "ui",
+    "server",
+    "dreamcatcher"
+  ],
+  "author": "D.FAVERIS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scenaristeur/smag0UiServer/issues"
+  },
+  "homepage": "https://github.com/scenaristeur/smag0UiServer#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.4.8"
+  }
+}
