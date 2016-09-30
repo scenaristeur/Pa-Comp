@@ -20,6 +20,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
 <link rel="import" href="my-icons.html">
 
 <dom-module id="my-app">
@@ -63,6 +64,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
 
+		<!-- LOCAL STORAGE -->
+	<app-localstorage-document key="data2send" data="{{data2send}}">
+		</app-localstorage-document>
+	
+	
     <app-location route="{{route}}"></app-location>
     <app-route
         route="{{route}}"
@@ -87,7 +93,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
             <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
-            <div main-title>My App</div>
+            <div main-title>Pa-Comp</div>
           </app-toolbar>
         </app-header>
 
@@ -96,13 +102,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             attr-for-selected="name"
             fallback-selection="view404"
             role="main">
+			<template is="dom-bind">
           <my-view1 name="view1"></my-view1>
           <my-view2 name="view2"></my-view2>
           <my-view3 name="view3"></my-view3>
           <my-view404 name="view404"></my-view404>
+			</template>
         </iron-pages>
       </app-header-layout>
     </app-drawer-layout>
+	
+
   </template>
 
   <script>
@@ -114,7 +124,93 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           type: String,
           reflectToAttribute: true,
           observer: '_pageChanged'
-        }
+        },
+		scenarios : {
+			type : Array,
+			notify : true,
+			value : ["AZ", "DS"]
+			},
+		data2send : {
+			type : Object,
+			value : {
+				"scenarios": [
+					{//Couple
+						"test_case": {
+						"familles": [
+							{
+							"parents": [],
+							"enfants": []
+							}
+						],
+						"foyers_fiscaux": [
+							{
+								"declarants": [],
+								"personnes_a_charge": []
+							}
+						],
+						"individus": [],
+						"menages": [
+							{
+								"personne_de_reference": "",
+								"enfants": []
+							}
+						]
+					},
+				"period": "2015"
+				},
+				{//Monsieur
+						"test_case": {
+						"familles": [
+							{
+							"parents": [],
+							"enfants": []
+							}
+						],
+						"foyers_fiscaux": [
+							{
+								"declarants": [],
+								"personnes_a_charge": []
+							}
+						],
+						"individus": [],
+						"menages": [
+							{
+								"personne_de_reference": "",
+								"enfants": []
+							}
+						]
+					},
+				"period": "2015"
+				},
+				{//Madame
+						"test_case": {
+						"familles": [
+							{
+							"parents": [],
+							"enfants": []
+							}
+						],
+						"foyers_fiscaux": [
+							{
+								"declarants": [],
+								"personnes_a_charge": []
+								
+							}
+						],
+						"individus": [],
+						"menages": [
+							{
+								"personne_de_reference": "",
+								"enfants": []
+							}
+						]
+					},
+				"period": "2015"
+				}
+			],
+			"variables": ["revdisp","nivvie_net"]
+		}
+		}
       },
 
       observers: [

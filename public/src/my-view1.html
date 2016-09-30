@@ -1,37 +1,56 @@
 <!--
-@license
-Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+	@license
+	Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+	This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+	The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+	The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+	Code distributed by Google as part of the polymer project is also
+	subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
 
 <dom-module id="my-view1">
-  <template>
-    <style include="shared-styles">
-      :host {
-        display: block;
-
-        padding: 10px;
-      }
-    </style>
-
-    <div class="card">
-      <div class="circle">1</div>
-      <h1>View One</h1>
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
-    </div>
-  </template>
-
-  <script>
-    Polymer({
-      is: 'my-view1'
-    });
-  </script>
-</dom-module>
+	<template unresolved>
+		<style include="shared-styles">
+			:host {
+			display: block;
+			
+			padding: 10px;
+			}
+		</style>
+		
+		<!-- LOCAL STORAGE -->
+		<app-localstorage-document key="data2send" data="{{data2send}}">
+		</app-localstorage-document>
+		
+		<div class="card">
+			<div class="circle">1</div>
+			<h1>View One</h1> {{scenarios}}
+			<p>Ut labores minimum atomorum pro. Laudem tibique ut has.
+				<p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+			</div>
+		</template>
+		
+		<script>
+			Polymer({
+				is: 'my-view1',
+				properties: {
+					data2send : {
+						type : Object,
+						notify : true,
+						observer: '_dataChanged'
+					}
+					
+				},
+				ready : function(){
+					// console.log(data2send);
+				},
+				_dataChanged(data){
+					console.log(data);
+				}
+			});
+		</script>
+	</dom-module>
