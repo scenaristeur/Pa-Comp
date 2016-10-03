@@ -1,0 +1,85 @@
+<!--
+	@license
+	Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+	This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+	The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+	The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+	Code distributed by Google as part of the polymer project is also
+	subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/openfisca-pension/openfisca-calcul.html">
+<link rel="import" href="../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
+<link rel="import" href="../bower_components/openfisca-pension/openfisca-resultat.html">
+
+
+<dom-module id="my-view6">
+	<template>
+		<style include="shared-styles">
+			:host {
+			display: block;
+			
+			padding: 10px;
+			}
+			   paper-icon-button.giant {
+    width: 100px;
+    height: 100px;
+    }
+		</style>
+		<!-- LOCAL STORAGE -->
+		<app-localstorage-document key="data2send" data="{{data2send}}">
+		</app-localstorage-document>
+				<app-localstorage-document key="resultat" data="{{resultat}}">
+		</app-localstorage-document>
+		<div class="card">
+			<div class="circle">6</div>
+			<h1>Calcul</h1>
+			
+			<openfisca-calcul><openfisca-calcul>
+				<!--<a href="/view7"><paper-icon-button icon="image:navigate-next"  class="giant" on-tap="next"></paper-icon-button></a> -->
+			</div>
+			
+			<!--<div class="card">
+				<div class="circle">6</div>
+				<h1>Resultat</h1>
+				
+				<openfisca-resultat><openfisca-resultat>
+					<a href="/view7"><paper-icon-button icon="image:navigate-next"  class="giant" on-tap="next"></paper-icon-button></a> 
+				</div>-->
+				</template>
+				
+				<script>
+					Polymer({
+						is: 'my-view6',
+						properties : {
+							data2send : {
+								type : Object,
+								notify : true,
+								observer: '_dataChanged'
+							},
+														resultat : {
+								type : Object,
+								notify : true,
+								observer: '_resultatChanged'
+							},
+						},
+						/////////////////////////////////
+						//
+						// FONCTIONS
+						//		
+						//////////////////////////////// 
+						
+						_dataChanged : function(){
+							console.log(this.data2send);
+							// this.individusCouple=this.data2send.scenarios[0].test_case.individus;
+						},
+						_resultatChanged : function(resultat){
+							console.log(resultat);
+							// this.individusCouple=this.data2send.scenarios[0].test_case.individus;
+						},
+					});
+				</script>
+			</dom-module>
+						

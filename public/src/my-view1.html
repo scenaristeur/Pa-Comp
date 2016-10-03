@@ -12,6 +12,8 @@
 <link rel="import" href="shared-styles.html">
 <link rel="import" href="../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
 <link rel="import" href="../bower_components/openfisca-pension/openfisca-individu.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icons/image-icons.html">
 
 <dom-module id="my-view1">
 	<template unresolved>
@@ -20,6 +22,10 @@
 			display: block;
 			
 			padding: 10px;
+			}
+			paper-icon-button.giant {
+			width: 100px;
+			height: 100px;
 			}
 		</style>
 		
@@ -30,37 +36,22 @@
 		<div class="card">
 			<div class="circle">1</div>
 			<h1>Famille</h1>
-				<openfisca-individu></openfisca-individu>
-			</div>
-		</template>
-		
-		<script>
-			Polymer({
-				is: 'my-view1',
-				properties: {
-					data2send : {
-						type : Object,
-						notify : true,
-						observer: '_dataChanged'
-					},
-					individusCouple : {
-						type : Array,
-						notify : true,
-						observer: '_individusCoupleChanged'
-					}
-					
+			<openfisca-individu></openfisca-individu>
+			
+			<a href="/view2"><paper-icon-button icon="image:navigate-next"  class="giant" on-tap="next"></paper-icon-button></a> 
+		</div>
+	</template>
+	
+	<script>
+		Polymer({
+			is: 'my-view1',
+			properties: {
+				data2send : {
+					type : Object,
+					notify : true,
+					//observer: '_dataChanged'
 				},
-				ready : function(){
-					// console.log(data2send);
-				},
-				_dataChanged:function(data){
-					console.log(data);
-					console.log(data.scenarios[0].test_case.individus);
-					this.individusCouple=data.scenarios[0].test_case.individus;
-				},
-				_individusCoupleChanged:function(individusCpl){
-					console.log(individusCpl);
-					}
-			});
-		</script>
-	</dom-module>
+			},
+		});
+	</script>
+</dom-module>

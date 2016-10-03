@@ -10,9 +10,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="shared-styles.html">
-<link rel="import" href="../bower_components/openfisca-pension/openfisca-variable.html">
+<link rel="import" href="../bower_components/openfisca-pension/openfisca-monsieur.html">
 
-<dom-module id="my-view3">
+<dom-module id="my-view4">
   <template>
     <style include="shared-styles">
       :host {
@@ -24,25 +24,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     width: 100px;
     height: 100px;
     }
-    </style>
+	  </style>
 
     <div class="card">
-      <div class="circle">3</div>
-      <h1>Separation</h1>
-
-	  <openfisca-variable></openfisca-variable>
-	  <a href="/view4"><paper-icon-button icon="image:navigate-next"  class="giant" on-tap="next"></paper-icon-button></a> 
+      <div class="circle">4</div>
+      <h1>Scenario Monsieur</h1>
+      	<openfisca-monsieur></openfisca-monsieur>
+			<a href="/view5"><paper-icon-button icon="image:navigate-next"  class="giant" on-tap="next"></paper-icon-button></a> 
     </div>
   </template>
 
   <script>
     Polymer({
-      is: 'my-view3',
-	  properties:{
-		  		
-		  
-		  },
-
+      is: 'my-view4'
     });
   </script>
 </dom-module>

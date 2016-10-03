@@ -10,6 +10,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
+<link rel="import" href="../bower_components/openfisca-pension/openfisca-couple.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/iron-icons/image-icons.html">
 
 <dom-module id="my-view2">
   <template>
@@ -18,20 +23,67 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
 
         padding: 10px;
+         
       }
+      paper-icon-button.giant {
+    width: 100px;
+    height: 100px;
+    }
     </style>
+    
+    		<!-- LOCAL STORAGE -->
+		<app-localstorage-document key="data2send" data="{{data2send}}">
+		</app-localstorage-document>
+				<app-localstorage-document key="individus" data="{{individus}}">
+		</app-localstorage-document>
 
     <div class="card">
       <div class="circle">2</div>
-      <h1>View Two</h1>
-      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.</p>
-      <p>Id nam odio natum malorum, tibique copiosae expetenda mel ea.Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam.Id nam odio natum malorum, tibique copiosae expetenda mel ea.</p>
+      <h1>Scenario Couple</h1>
+      	<openfisca-couple></openfisca-couple>
+			<a href="/view3"><paper-icon-button icon="image:navigate-next"  class="giant" on-tap="next"></paper-icon-button></a> 
     </div>
   </template>
 
   <script>
     Polymer({
-      is: 'my-view2'
+      is: 'my-view2',
+      properties : {
+			data2send : {
+				type : Object,
+				notify : true,
+				observer: '_dataChanged'
+			},
+			individus: {
+				type : Array,
+				notify : true,
+				observer :'_individusChanged'
+			},
+			individusCouple : {
+				type : Array,
+				notify : true,
+				observer: '_individusCoupleChanged'
+			}      
+      
+      },
+      
+		/////////////////////////////////
+		//
+		// FONCTIONS
+		//		
+		//////////////////////////////// 
+		     
+      _dataChanged : function(){
+      	 console.log(this.data2send);
+      	// this.individusCouple=this.data2send.scenarios[0].test_case.individus;
+      },
+      _individusChanged : function(){
+      	 console.log(this.individus);
+      },
+      _individusCoupleChanged : function(){
+      	 console.log(this.individusCouple);
+      },
+      	 
     });
   </script>
 </dom-module>
