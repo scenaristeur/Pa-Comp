@@ -3,6 +3,8 @@
 # Utilisation en ligne et démo :
 https://pa-comp.firebaseapp.com/
 
+#Tutoriel : 
+[![Tutoriel Pa-Comp](http://img.youtube.com/vi/5RBjF6_IqNw/0.jpg)](http://www.youtube.com/watch?v=5RBjF6_IqNw)
 
 # installation en local
 - necessite nodejs, npm, bower
