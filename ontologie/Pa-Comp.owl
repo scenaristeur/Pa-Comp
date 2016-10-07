@@ -1,0 +1,588 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#"
+     xml:base="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Pa-Comp="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp">
+        <owl:versionIRI rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp/1.0.0"/>
+        <rdfs:comment>Pa-Comp est un outil permettant d&apos;évaluer l&apos;impact d&apos;une séparation sur les conditions financières d&apos;un ménage (prestations sociales, impôts...)
+Utilise l&apos;ApiWeb OpenFisca</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#envoieData -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#envoieData"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#estFonctionnalitéDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#estFonctionnalitéDe">
+        <owl:inverseOf rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#hasFonctionnalité"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#estUtiliséPar -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#estUtiliséPar">
+        <owl:inverseOf rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#utilise"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#first -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#first"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#hasFonctionnalité -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#hasFonctionnalité"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#hasMenu -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#hasMenu"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#hasPart"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#isMenuOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#isMenuOf"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#isPartOf"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#next -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#next">
+        <owl:inverseOf rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#previous"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#previous -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#previous"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#recoitData -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#recoitData"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#repondData -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#repondData"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#utilise -->
+
+    <owl:ObjectProperty rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#utilise"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Api -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Api"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Application -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Application"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Bouton -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Bouton">
+        <rdfs:subClassOf rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#UIElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Data -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Data"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#DataFormat -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#DataFormat"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Ecran -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Ecran"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Fonctionnalité -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Fonctionnalité"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéAnnexe -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéAnnexe">
+        <rdfs:subClassOf rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Fonctionnalité"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéPrincipale -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéPrincipale">
+        <rdfs:subClassOf rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Fonctionnalité"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Framework -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Framework"/>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Input -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Input">
+        <rdfs:subClassOf rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#UIElement"/>
+        <rdfs:label xml:lang="fr">Champ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Liste -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Liste">
+        <rdfs:subClassOf rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#UIElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SousFonctionnalité -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SousFonctionnalité">
+        <rdfs:subClassOf rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Fonctionnalité"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#UIElement -->
+
+    <owl:Class rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#UIElement">
+        <rdfs:label xml:lang="fr">Element d&apos;interface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#AffichageResultat -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#AffichageResultat">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéPrincipale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ApiData2send -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ApiData2send">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Data"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#JsonFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ApiResult -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ApiResult">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Data"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#JsonFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonAddIndividu -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonAddIndividu">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Bouton"/>
+        <next rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonDeleteAllIndividus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonDeleteAllIndividus -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonDeleteAllIndividus">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Bouton"/>
+        <next rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ListeIndividus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonDeleteOneIndividu -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonDeleteOneIndividu">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Bouton"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonNextEcran -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonNextEcran">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Bouton"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Calcul -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Calcul">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéPrincipale"/>
+        <next rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#AffichageResultat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ChampDateNaissance -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ChampDateNaissance">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Input"/>
+        <next rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ChampSalaireImposable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ChampNom -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ChampNom">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Input"/>
+        <next rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ChampDateNaissance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ChampSalaireImposable -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ChampSalaireImposable">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Input"/>
+        <next rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonAddIndividu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ContactDeveloppeur -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ContactDeveloppeur">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéAnnexe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#JsonFormat -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#JsonFormat">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#DataFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#LienVersCodeSource -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#LienVersCodeSource">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéAnnexe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ListeIndividus -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ListeIndividus">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Liste"/>
+        <next rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonNextEcran"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonDeleteOneIndividu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ListeStatutScenarioCouple -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ListeStatutScenarioCouple">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Liste"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ListeStatutScenarioMadame -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ListeStatutScenarioMadame">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Liste"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ListeStatutScenarioMonsieur -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ListeStatutScenarioMonsieur">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Liste"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#MenuChangementEcran -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#MenuChangementEcran">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéPrincipale"/>
+        <first rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieMembresFamille"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#OpenFiscaWebApi -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#OpenFiscaWebApi">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Api"/>
+        <recoitData rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ApiData2send"/>
+        <repondData rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ApiResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Pa-Comp -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Pa-Comp">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Application"/>
+        <envoieData rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ApiData2send"/>
+        <recoitData rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ApiResult"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#MenuChangementEcran"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#OpenFiscaWebApi"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Polymer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Polymer -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Polymer">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Framework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#PrésentationApplication -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#PrésentationApplication">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéAnnexe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieLoyerCouple -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieLoyerCouple">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SousFonctionnalité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieLoyerMadame -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieLoyerMadame">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SousFonctionnalité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieLoyerMonsieur -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieLoyerMonsieur">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SousFonctionnalité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieMembresFamille -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieMembresFamille">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéPrincipale"/>
+        <first rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ChampNom"/>
+        <next rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieScenarioCouple"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonAddIndividu"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonDeleteAllIndividus"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonNextEcran"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ChampDateNaissance"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ChampNom"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ChampSalaireImposable"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ListeIndividus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieOccupationCouple -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieOccupationCouple">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SousFonctionnalité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieOccupationMadame -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieOccupationMadame">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SousFonctionnalité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieOccupationMonsieur -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieOccupationMonsieur">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SousFonctionnalité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieScenarioCouple -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieScenarioCouple">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéPrincipale"/>
+        <hasPart rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieLoyerCouple"/>
+        <hasPart rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieOccupationCouple"/>
+        <hasPart rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieStatutScenarioCouple"/>
+        <next rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieSeparation"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#BoutonNextEcran"/>
+        <utilise rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#ListeStatutScenarioCouple"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieScenarioMadame -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieScenarioMadame">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéPrincipale"/>
+        <hasPart rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieLoyerMadame"/>
+        <hasPart rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieOccupationMadame"/>
+        <hasPart rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieStatutScenarioMadame"/>
+        <next rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#Calcul"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieScenarioMonsieur -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieScenarioMonsieur">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéPrincipale"/>
+        <hasPart rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieLoyerMonsieur"/>
+        <hasPart rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieOccupationMonsieur"/>
+        <hasPart rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieStatutScenarioMonsieur"/>
+        <next rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieScenarioMadame"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieSeparation -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieSeparation">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéPrincipale"/>
+        <next rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieScenarioMonsieur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieStatutScenarioCouple -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieStatutScenarioCouple">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SousFonctionnalité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieStatutScenarioMadame -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieStatutScenarioMadame">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SousFonctionnalité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieStatutScenarioMonsieur -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SaisieStatutScenarioMonsieur">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#SousFonctionnalité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#TutorielApplication -->
+
+    <owl:NamedIndividual rdf:about="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#TutorielApplication">
+        <rdf:type rdf:resource="http://www.smag0.blogspot.fr/NS/Application/Pa-Comp#FonctionnalitéAnnexe"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
