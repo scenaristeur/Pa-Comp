@@ -7,6 +7,8 @@
 	Code distributed by Google as part of the polymer project is also
 	subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
+<!-- Corriger RSA, lequel prendre + supprimer doublon (data2send déclaré 2fois : ici et dans individus -->
+		<!-- "rsa","rsa_socle","rsa_socle_majore"  "rsa_revenu_activite_individu",-->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
@@ -137,7 +139,7 @@
 				scenarios : {
 					type : Array,
 					notify : true,
-					value : ["AZ", "DS"]
+					value : []
 				},
 				data2send : {
 					type : Object,
@@ -165,7 +167,7 @@
 								}
 								]
 							},
-							"period": "2015"
+							"period": "2016"
 						},
 						{//Monsieur
 							"test_case": {
@@ -189,7 +191,7 @@
 								}
 								]
 							},
-							"period": "2015"
+							"period": "2016"
 						},
 						{//Madame
 							"test_case": {
@@ -214,10 +216,10 @@
 								}
 								]
 							},
-							"period": "2015"
+							"period": "2016"
 						}
 						],
-						"variables": ["revdisp","nivvie_net","irpp","nivvie_net","uc","mini","pfam","aides_logement","csg","aides_logement","salaire_imposable","csg"]
+						"variables": ["revdisp","nivvie_net","irpp","nivvie_net","uc","rsa","pfam","aides_logement","csg","aides_logement","salaire_imposable","csg"]
 					}
 				}
 			},
