@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>TestOpenfisca</title>
+  <script type="text/javascript" src="of.js"></script>
+</head>
+<body>
+<h1>Contenu du data à envoyer</h1> 
+
+<textarea id="myTextArea" cols=100 rows=50 ></textarea>
+<div>
+	<button onclick="prettyPrint()">Re-indent</button>
+	<button onclick="launchQuery()">Execute requête</button>
+</div>
+
+<h1>Resultat</h1> 
+<textarea id="resultTextArea" label="Contenu du data à envoyer" cols=100 rows=50 ></textarea>
+
+</body>
+<script>
+	console.log(data);
+    var pretty = JSON.stringify(data, undefined, 4);
+    document.getElementById('myTextArea').value = pretty;
+</script>
+</html>
