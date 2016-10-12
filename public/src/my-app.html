@@ -91,10 +91,12 @@
 					<a name="view6" href="/view6">Calcul</a>
 					<center><a href="/" >...</a></center>
 					<a name="visite" href="/visite" >Première Visite</a>
-					<a href="https://github.com/scenaristeur/Pa-Comp" target="_blank">Code source et installation</a>
-					<a href="https://twitter.com/intent/tweet?screen_name=DFaveris&text=%23Pa-Comp" class="twitter-mention-button" data-related="DFaveris" target="_blank"> Developpement, Question ? Tweet to @DFaveris</a>
+					<a href="https://github.com/scenaristeur/Pa-Comp" target="_blank">Télécharger</a>
+					<a name="outils" href="/bower_components/openfisca-pension/outils/" target="_blank">Outils Openfisca</a>
+					<a href="https://twitter.com/intent/tweet?screen_name=DFaveris&text=%23Pa-Comp" class="twitter-mention-button" data-related="DFaveris" target="_blank"> Developpement, Question ? Tweet @DFaveris</a>
 					
 				</iron-selector>
+				
 			</app-drawer>
 			
 			<!-- Main content -->
@@ -126,7 +128,7 @@
 		
 		
 	</template>
-	
+
 	<script>
 		Polymer({
 			is: 'my-app',
@@ -220,7 +222,7 @@
 							"period": "2016"
 						}
 						],
-						"variables": ["revdisp","nivvie_net","irpp","nivvie_net","uc","rsa","pfam","aides_logement","csg","aides_logement","salaire_imposable","csg"]
+						"variables": ["revdisp","revini","traitements_salaires_pensions_rentes","nivvie_net","irpp","nivvie_net","uc","rsa","psoc","pfam","aides_logement","csg","aides_logement","salaire_imposable","csg"]
 					}
 				}
 			},
