@@ -27,7 +27,7 @@ var data=  {
       "period": "2016"
     }
   ],
-  "variables": ["revdisp","rsa","pfam","nivvie"]
+  "variables": ["revdisp","irpp","rsa","pfam","nivvie"]
 };
 
 
