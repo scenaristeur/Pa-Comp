@@ -8,7 +8,7 @@
 	subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <!-- Corriger RSA, lequel prendre + supprimer doublon (data2send déclaré 2fois : ici et dans individus -->
-		<!-- "rsa","rsa_socle","rsa_socle_majore"  "rsa_revenu_activite_individu",-->
+<!-- "rsa","rsa_socle","rsa_socle_majore"  "rsa_revenu_activite_individu",-->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
@@ -64,6 +64,11 @@
 			
 			font-weight: bold;
 			}
+			.subtitle {
+			padding-top: 4px;
+			font-size: 16px;
+			color: #ccc;
+			}
 		</style>
 		
 		<!-- LOCAL STORAGE -->
@@ -83,12 +88,12 @@
 			<app-drawer>
 				<app-toolbar>Menu</app-toolbar>
 				<iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-					<a name="view1" href="/view1">Famille</a>
-					<a name="view2" href="/view2">Scenario Couple</a>
-					<a name="view3" href="/view3">Séparation</a>
-					<a name="view4" href="/view4">Scenario Monsieur</a>
-					<a name="view5" href="/view5">Scenario Madame</a>
-					<a name="view6" href="/view6">Calcul</a>
+					<a name="view1" href="/view1">Membres de la famille</a>
+					<a name="view2" href="/view2">Situation Couple Avant</a>
+					<a name="view3" href="/view3"><u>Séparation</u></a>
+					<a name="view4" href="/view4">Situation Monsieur Après</a>
+					<a name="view5" href="/view5">Situation Madame Après</a>
+					<a name="view6" href="/view6"><u>Calcul</u></a>
 					<center><a href="/" >...</a></center>
 					<a name="visite" href="/visite" >Première Visite</a>
 					<a href="https://github.com/scenaristeur/Pa-Comp" target="_blank">Télécharger</a>
@@ -106,7 +111,9 @@
 					<app-toolbar>
 						<paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
 						<div main-title>Pa-Comp</div>
+						
 					</app-toolbar>
+					
 				</app-header>
 				
 				<iron-pages
@@ -128,7 +135,7 @@
 		
 		
 	</template>
-
+	
 	<script>
 		Polymer({
 			is: 'my-app',
@@ -140,110 +147,111 @@
 					observer: '_pageChanged'
 				},
 				scenarios : {
-					type : Array,
-					notify : true,
-					value : []
+				type : Array,
+				notify : true,
+				value : []
 				},
 				data2send : {
-					type : Object,
-					value : {
-						"scenarios": [
-						{//Couple
-							"test_case": {
-								"familles": [
-								{
-									"parents": [],
-									"enfants": []
-								}
-								],
-								"foyers_fiscaux": [
-								{
-									"declarants": [],
-									"personnes_a_charge": []
-								}
-								],
-								"individus": [],
-								"menages": [
-								{
-									"personne_de_reference": "",
-									"enfants": []
-								}
-								]
-							},
-							"period": "2016"
-						},
-						{//Monsieur
-							"test_case": {
-								"familles": [
-								{
-									"parents": [],
-									"enfants": []
-								}
-								],
-								"foyers_fiscaux": [
-								{
-									"declarants": [],
-									"personnes_a_charge": []
-								}
-								],
-								"individus": [],
-								"menages": [
-								{
-									"personne_de_reference": "",
-									"enfants": []
-								}
-								]
-							},
-							"period": "2016"
-						},
-						{//Madame
-							"test_case": {
-								"familles": [
-								{
-									"parents": [],
-									"enfants": []
-								}
-								],
-								"foyers_fiscaux": [
-								{
-									"declarants": [],
-									"personnes_a_charge": []
-									
-								}
-								],
-								"individus": [],
-								"menages": [
-								{
-									"personne_de_reference": "",
-									"enfants": []
-								}
-								]
-							},
-							"period": "2016"
-						}
-						],
-						"variables": ["revdisp","revini","traitements_salaires_pensions_rentes","nivvie_net","irpp","nivvie_net","uc","rsa","psoc","pfam","aides_logement","csg","aides_logement","salaire_imposable","csg"]
-					}
+				type : Object,
+				value : {
+				"scenarios": [
+				{//Couple
+				"test_case": {
+				"familles": [
+				{
+				"parents": [],
+				"enfants": []
 				}
-			},
-			
-			observers: [
-			'_routePageChanged(routeData.page)'
-			],
-			
-			_routePageChanged: function(page) {
+				],
+				"foyers_fiscaux": [
+				{
+				"declarants": [],
+				"personnes_a_charge": []
+				}
+				],
+				"individus": [],
+				"menages": [
+				{
+				"personne_de_reference": "",
+				"enfants": []
+				}
+				]
+				},
+				"period": "2016"
+				},
+				{//Monsieur
+				"test_case": {
+				"familles": [
+				{
+				"parents": [],
+				"enfants": []
+				}
+				],
+				"foyers_fiscaux": [
+				{
+				"declarants": [],
+				"personnes_a_charge": []
+				}
+				],
+				"individus": [],
+				"menages": [
+				{
+				"personne_de_reference": "",
+				"enfants": []
+				}
+				]
+				},
+				"period": "2016"
+				},
+				{//Madame
+				"test_case": {
+				"familles": [
+				{
+				"parents": [],
+				"enfants": []
+				}
+				],
+				"foyers_fiscaux": [
+				{
+				"declarants": [],
+				"personnes_a_charge": []
+				
+				}
+				],
+				"individus": [],
+				"menages": [
+				{
+				"personne_de_reference": "",
+				"enfants": []
+				}
+				]
+				},
+				"period": "2016"
+				}
+				],
+				"variables": ["revdisp","revini","traitements_salaires_pensions_rentes","nivvie_net","irpp","nivvie_net","uc","rsa","psoc","pfam","aides_logement","csg","aides_logement","salaire_imposable","csg"]
+				}
+				}
+				},
+				
+				observers: [
+				'_routePageChanged(routeData.page)'
+				],
+				
+				_routePageChanged: function(page) {
 				this.page = page || 'visite';
-			},
-			
-			_pageChanged: function(page) {
+				},
+				
+				_pageChanged: function(page) {
 				// Load page import on demand. Show 404 page if fails
 				var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
 				this.importHref(resolvedPageUrl, null, this._showPage404, true);
-			},
-			
-			_showPage404: function() {
+				},
+				
+				_showPage404: function() {
 				this.page = 'view404';
-			}
-		});
-	</script>
-</dom-module>
+				}
+				});
+				</script>
+				</dom-module>
+								
