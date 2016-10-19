@@ -30,7 +30,8 @@
     "paper-toast": "^1.3.0",
     "openfisca-pension": "scenaristeur/openfisca-pension",
     "google-youtube": "GoogleWebComponents/google-youtube#^1.2.1",
-    "mailchimp-subscribe": "scenaristeur/mailchimp-subscribe"
+    "mailchimp-subscribe": "scenaristeur/mailchimp-subscribe",
+    "iron-image": "PolymerElements/iron-image#^1.2.5"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"
