@@ -1,0 +1,208 @@
+# ce fichier représente le fichier json typique à envoyer à OpenFisca
+# afin d'obtenir une réponse correcte dans l'application Pa-Comp
+# en copiant le json ci-dessous, et le collant dans l'"Outils OpenFisca"
+# https://pa-comp.firebaseapp.com/bower_components/openfisca-pension/outils/ 
+# vous pouvez initialiser l'application Pa-Comp https://pa-comp.firebaseapp.com/
+# SUPPRIMEZ CES LIGNES DE COMMENTAIRE SI VOUS VOULEZ UTILISER CES DONNEES EN TANT QUE FICHIER JSON
+
+
+{
+    "scenarios": [
+        {
+            "test_case": {
+                "familles": [
+                    {
+                        "parents": [
+                            "D",
+                            "A"
+                        ],
+                        "enfants": [
+                            "L",
+                            "S",
+                            "M",
+                            "E"
+                        ]
+                    }
+                ],
+                "foyers_fiscaux": [
+                    {
+                        "declarants": [
+                            "D",
+                            "A"
+                        ],
+                        "personnes_a_charge": [
+                            "L",
+                            "S",
+                            "M",
+                            "E"
+                        ]
+                    }
+                ],
+                "individus": [
+                    {
+                        "id": "D",
+                        "date_naissance": "1977-05-14",
+                        "salaire_imposable": "24000"
+                    },
+                    {
+                        "id": "A",
+                        "date_naissance": "1978-10-11",
+                        "salaire_imposable": "24000"
+                    },
+                    {
+                        "id": "L",
+                        "date_naissance": "2000-08-23"
+                    },
+                    {
+                        "id": "S",
+                        "date_naissance": "2004-07-02"
+                    },
+                    {
+                        "id": "M",
+                        "date_naissance": "2007-02-08"
+                    },
+                    {
+                        "id": "E",
+                        "date_naissance": "2011-01-28"
+                    }
+                ],
+                "menages": [
+                    {
+                        "personne_de_reference": "D",
+                        "enfants": [
+                            "L",
+                            "S",
+                            "M",
+                            "E"
+                        ],
+                        "loyer": "1000",
+                        "conjoint": "A",
+                        "statut_occupation_logement": 4
+                    }
+                ]
+            },
+            "period": "2016"
+        },
+        {
+            "test_case": {
+                "familles": [
+                    {
+                        "parents": [
+                            "D"
+                        ],
+                        "enfants": []
+                    }
+                ],
+                "foyers_fiscaux": [
+                    {
+                        "declarants": [
+                            "D"
+                        ],
+                        "personnes_a_charge": []
+                    }
+                ],
+                "individus": [
+                    {
+                        "id": "D",
+                        "date_naissance": "1977-05-14",
+                        "salaire_imposable": "24000"
+                    }
+                ],
+                "menages": [
+                    {
+                        "personne_de_reference": "D",
+                        "enfants": [],
+                        "loyer": "530",
+                        "statut_occupation_logement": 3
+                    }
+                ]
+            },
+            "period": "2016"
+        },
+        {
+            "test_case": {
+                "familles": [
+                    {
+                        "parents": [
+                            "A"
+                        ],
+                        "enfants": [
+                            "L",
+                            "S",
+                            "M",
+                            "E"
+                        ]
+                    }
+                ],
+                "foyers_fiscaux": [
+                    {
+                        "declarants": [
+                            "A"
+                        ],
+                        "personnes_a_charge": [
+                            "L",
+                            "S",
+                            "M",
+                            "E"
+                        ]
+                    }
+                ],
+                "individus": [
+                    {
+                        "id": "A",
+                        "date_naissance": "1978-10-11",
+                        "salaire_imposable": "24000"
+                    },
+                    {
+                        "id": "L",
+                        "date_naissance": "2000-08-23"
+                    },
+                    {
+                        "id": "S",
+                        "date_naissance": "2004-07-02"
+                    },
+                    {
+                        "id": "M",
+                        "date_naissance": "2007-02-08"
+                    },
+                    {
+                        "id": "E",
+                        "date_naissance": "2011-01-28"
+                    }
+                ],
+                "menages": [
+                    {
+                        "personne_de_reference": "A",
+                        "enfants": [
+                            "L",
+                            "S",
+                            "M",
+                            "E"
+                        ],
+                        "loyer": "680",
+                        "statut_occupation_logement": 4
+                    }
+                ]
+            },
+            "period": "2016"
+        }
+    ],
+    "variables": [
+        "revdisp",
+        "revini",
+        "traitements_salaires_pensions_rentes",
+        "nivvie_net",
+        "irpp",
+        "mini",
+        "nivvie_net",
+        "uc",
+        "rsa",
+        "psoc",
+        "pfam",
+        "aides_logement",
+        "csg",
+        "aides_logement",
+        "salaire_imposable",
+        "csg"
+    ]
+}
