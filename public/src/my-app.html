@@ -31,10 +31,10 @@
 			:host {
 			--app-primary-color: #4285f4;
 			--app-secondary-color: black;
-			
+
 			display: block;
 			}
-			
+
 			app-header {
 			color: #fff;
 			background-color: var(--app-primary-color);
@@ -42,26 +42,26 @@
 			app-header paper-icon-button {
 			--paper-icon-button-ink-color: white;
 			}
-			
+
 			.drawer-list {
 			margin: 0 20px;
 			}
-			
+
 			.drawer-list a {
 			display: block;
-			
+
 			padding: 0 16px;
-			
+
 			text-decoration: none;
-			
+
 			color: var(--app-secondary-color);
-			
+
 			line-height: 40px;
 			}
-			
+
 			.drawer-list a.iron-selected {
 			color: black;
-			
+
 			font-weight: bold;
 			}
 			.subtitle {
@@ -70,19 +70,19 @@
 			color: #ccc;
 			}
 		</style>
-		
+
 		<!-- LOCAL STORAGE -->
 		<app-localstorage-document key="data2send" data="{{data2send}}">
 		</app-localstorage-document>
-		
-		
+
+
 		<app-location route="{{route}}"></app-location>
 		<app-route
         route="{{route}}"
         pattern="/:page"
         data="{{routeData}}"
         tail="{{subroute}}"></app-route>
-		
+
 		<app-drawer-layout fullbleed>
 			<!-- Drawer content -->
 			<app-drawer>
@@ -99,23 +99,26 @@
 					<a href="https://github.com/scenaristeur/Pa-Comp" target="_blank">Télécharger</a>
 					<a name="outils" href="/bower_components/openfisca-pension/outils/" target="_blank">Outils Openfisca</a>
 					<a href="https://twitter.com/intent/tweet?screen_name=DFaveris&text=%23Pa-Comp" class="twitter-mention-button" data-related="DFaveris" target="_blank"> Developpement, Question ? Tweet @DFaveris</a>
-					
+
 				</iron-selector>
-				
+				<script type="text/javascript" src="http://counter2.01counter.com/private/countertab.js?c=af445afbf03fd02c1a126380edb740e7"></script>
+<noscript><a href="http://www.compteurdevisite.com" title="compteur html"><img src="http://counter2.01counter.com/private/compteurdevisite.php?c=af445afbf03fd02c1a126380edb740e7" border="0" title="compteur html" alt="compteur html"></a>
+</noscript>
+        
 			</app-drawer>
-			
+
 			<!-- Main content -->
 			<app-header-layout has-scrolling-region>
-				
+
 				<app-header condenses reveals effects="waterfall">
 					<app-toolbar>
 						<paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
 						<div main-title>Pa-Comp</div>
-						
+
 					</app-toolbar>
-					
+
 				</app-header>
-				
+
 				<iron-pages
 				selected="[[page]]"
 				attr-for-selected="name"
@@ -132,14 +135,14 @@
 				</iron-pages>
 			</app-header-layout>
 		</app-drawer-layout>
-		
-		
+
+
 	</template>
-	
+
 	<script>
 		Polymer({
 			is: 'my-app',
-			
+
 			properties: {
 				page: {
 					type: String,
@@ -215,7 +218,7 @@
 				{
 				"declarants": [],
 				"personnes_a_charge": []
-				
+
 				}
 				],
 				"individus": [],
@@ -233,25 +236,24 @@
 				}
 				}
 				},
-				
+
 				observers: [
 				'_routePageChanged(routeData.page)'
 				],
-				
+
 				_routePageChanged: function(page) {
 				this.page = page || 'visite';
 				},
-				
+
 				_pageChanged: function(page) {
 				// Load page import on demand. Show 404 page if fails
 				var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
 				this.importHref(resolvedPageUrl, null, this._showPage404, true);
 				},
-				
+
 				_showPage404: function() {
 				this.page = 'view404';
 				}
 				});
 				</script>
 				</dom-module>
-								
