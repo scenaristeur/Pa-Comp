@@ -35,6 +35,31 @@
 				height: 504px;
 				background: #ddd;
 			  }
+				paper-button.custom {
+					--paper-button-ink-color: var(--paper-pink-a200);
+					/* These could also be individually defined for each of the
+						specific css classes, but we'll just do it once as an example */
+					--paper-button-flat-keyboard-focus: {
+						background-color: var(--paper-pink-a200);
+						color: white !important;
+					};
+					--paper-button-raised-keyboard-focus: {
+						background-color: var(--paper-pink-a200) !important;
+						color: white !important;
+					};
+				}
+				paper-button.custom:hover {
+					background-color: var(--paper-indigo-100);
+				}
+				paper-button.indigo {
+					background-color: var(--paper-indigo-500);
+					color: white;
+					--paper-button-raised-keyboard-focus: {
+						background-color: var(--paper-pink-a200) !important;
+						color: white !important;
+					};
+				}
+			
 </style>
 
 		<div class="card">
@@ -43,6 +68,7 @@
 
 			Apprenez à utiliser Pa-Comp en 4 minutes.
 			</br>
+			<a href="https://www.youtube.com/watch?v=5RBjF6_IqNw" target="_blank"><paper-button raised class="custom indigo" id="newsButton" value="tutoriel">Voir le tutoriel sur Youtube</paper-button></a></br></br>
 			<google-youtube
 			video-id="5RBjF6_IqNw"
 			height="270px"
@@ -51,16 +77,22 @@
 			start="0"
 			autoplay="0">
 			</google-youtube>
+
 		</div>
 
 		<div class="card">
-			<div class="circle">E</div>xemple
+			<div class="circle">E</div>xemple de résultat
 <p><a href="resultat1.png"><img src="resultat1.png"></img></a></p>
 		<!--<iron-image sizing="contain" id="example-sizing-contain" alt="The Polymer logo." src="./resultat1.png"></iron-image>-->
 			<p>En utilisant les données <a href="../data/data2send-example.json" target="_blank">data2send-example</a></p>
 		</div>
 
-		<a href="/newsletter"><paper-icon-button icon="image:navigate-next"  class="giant" on-tap="next"></paper-icon-button></a>
+		<div class="card">
+			<a href="/tutoriel"><paper-button raised class="custom indigo" id="TutoButton" value="tutoriel">Tutoriel</paper-button></a>
+			<a href="/view1"><paper-button raised class="custom indigo" id="startButton" value="start">Utiliser Pa-Comp</paper-button></a>
+			<a href="/newsletter"><paper-button raised class="custom indigo" id="newsButton" value="tutoriel">Newsletter</paper-button></a>
+		</div>
+
 		</template>
 
 		<script>

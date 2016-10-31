@@ -15,6 +15,7 @@
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/iron-icons/image-icons.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
 
 
 <dom-module id="my-visite">
@@ -36,6 +37,31 @@
 				height: 504px;
 				background: #ddd;
 			  }
+
+  paper-button.custom {
+    --paper-button-ink-color: var(--paper-pink-a200);
+    /* These could also be individually defined for each of the
+      specific css classes, but we'll just do it once as an example */
+    --paper-button-flat-keyboard-focus: {
+      background-color: var(--paper-pink-a200);
+      color: white !important;
+    };
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+  paper-button.custom:hover {
+    background-color: var(--paper-indigo-100);
+  }
+  paper-button.indigo {
+    background-color: var(--paper-indigo-500);
+    color: white;
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
 </style>
 		<div class="card">
 			<div class="circle">A</div>rticle 371-2 du code civil :</br>
@@ -103,9 +129,12 @@
 			</ul>
 		</div>
 
+	<div class="card">
+		<a href="/tutoriel"><paper-button raised class="custom indigo" id="TutoButton" value="tutoriel">Tutoriel</paper-button></a>
+		<a href="/view1"><paper-button raised class="custom indigo" id="startButton" value="start">Utiliser Pa-Comp</paper-button></a>
+		<a href="/newsletter"><paper-button raised class="custom indigo" id="newsButton" value="tutoriel">Newsletter</paper-button></a>
+	</div>
 
-
-		<a href="/tutoriel"><paper-icon-button icon="image:navigate-next"  class="giant" on-tap="next"></paper-icon-button></a>
 		</template>
 
 		<script>
