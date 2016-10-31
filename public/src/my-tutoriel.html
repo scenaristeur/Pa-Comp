@@ -1,0 +1,72 @@
+<!--
+	@license
+	Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+	This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+	The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+	The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+	Code distributed by Google as part of the polymer project is also
+	subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+
+<link rel="import" href="../bower_components/google-youtube/google-youtube.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icons/image-icons.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+
+<dom-module id="my-tutoriel">
+	<template unresolved>
+		<style include="shared-styles">
+			:host {
+			display: block;
+
+			padding: 10px;
+			}
+			paper-icon-button.giant {
+			width: 100px;
+			height: 100px;
+			}
+		</style>
+					<style is="custom-style">
+			  #example-sizing-contain {
+				width: 100%;
+				height: 504px;
+				background: #ddd;
+			  }
+</style>
+
+		<div class="card">
+			<div class="circle">T</div>utoriel
+			<h1> Tutoriel</h1>
+
+			Apprenez à utiliser Pa-Comp en 4 minutes.
+			</br>
+			<google-youtube
+			video-id="5RBjF6_IqNw"
+			height="270px"
+			width="480px"
+			rel="0"
+			start="0"
+			autoplay="0">
+			</google-youtube>
+		</div>
+
+		<div class="card">
+			<div class="circle">E</div>xemple
+<p><a href="resultat1.png"><img src="resultat1.png"></img></a></p>
+		<!--<iron-image sizing="contain" id="example-sizing-contain" alt="The Polymer logo." src="./resultat1.png"></iron-image>-->
+			<p>En utilisant les données <a href="../data/data2send-example.json" target="_blank">data2send-example</a></p>
+		</div>
+
+		<a href="/newsletter"><paper-icon-button icon="image:navigate-next"  class="giant" on-tap="next"></paper-icon-button></a>
+		</template>
+
+		<script>
+		Polymer({
+		is: 'my-tutoriel',
+
+		});
+		</script>
+		</dom-module>

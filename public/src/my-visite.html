@@ -15,14 +15,14 @@
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/iron-icons/image-icons.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
-<link rel="import" href="../bower_components/mailchimp-subscribe/mailchimp-subscribe.html">
+
 
 <dom-module id="my-visite">
 	<template unresolved>
 		<style include="shared-styles">
 			:host {
 			display: block;
-			
+
 			padding: 10px;
 			}
 			paper-icon-button.giant {
@@ -54,34 +54,25 @@
 				<li>Un formulaire d'abonnement pour être informé des évolutions du projet,</li>
 				<li>Et enfin, <u><b>une vidéo tutoriel pour prendre en main rapidement Pa-Comp</b></u>.</li>
 			</ol>
-			Vous pouvez également faire part de vos remarques 
+			Vous pouvez également faire part de vos remarques
 			<a href="https://github.com/scenaristeur/Pa-Comp/issues/new" target="_blank">sur Github</a>,
 			<a href="https://twitter.com/intent/tweet?screen_name=DFaveris&text=%23Pa-Comp" target="_blank">sur twitter</a>,
-			ou encore ouvrir une <a href="https://groups.google.com/forum/#!topic/smag0/aHpVtnTM6hY" target="_blank">discussion sur le forum</a>.  
+			ou encore ouvrir une <a href="https://groups.google.com/forum/#!topic/smag0/aHpVtnTM6hY" target="_blank">discussion sur le forum</a>.
 		</div>
-		
-		
-		<div class="card">
-			<div class="circle">E</div>xemple
-<p><a href="./resultat1.png"><img src="./resultat1.png"></img></a></p>
-		<!--<iron-image sizing="contain" id="example-sizing-contain" alt="The Polymer logo." src="./resultat1.png"></iron-image>-->
-			<p>En utilisant les données <a href="../data/data2send-example.json" target="_blank">data2send-example</a></p>
-		</div>
-		
-		
-		
+
+
 		<div class="card">
 			<div class="circle">1</div>ère visite
 			<ul>
-				
-				
-				
+
+
+
 				<li>Pa-Comp est une application Web / Mobile, une WebApp.</li>
 				<li>L'objectif principal de cette application est de réduire les conflits
 					entre les deux parents au sujet de la pension alimentaire
 					(et les conséquences de ces conflits sur les enfants),
 				et pourquoi pas réduire le nombre de contentieux post-divorce ;-).</li>
-				
+
 				<li>Pour y parvenir,
 					l'application Pa-Comp facilite la prise de décision (par le juge ou en amont)
 					concernant le montant de la pension alimentaire en s'inspirant de la
@@ -89,8 +80,8 @@
 					note d'analyse 31</a> de France Stratégie
 					& en s'appuyant sur les calculs effectués par <a href="https://www.openfisca.fr/" target="_blank">l'API-Web OpenFisca</a>.
 				</li>
-				
-				
+
+
 				<li>En offrant aux parents, juges, avocats, greffiers
 					la possibilité d'évaluer objectivement l'impact d'une séparation sur les prestations sociales,
 					les impôts, ou le niveau de vie des deux nouveaux foyers,
@@ -105,44 +96,22 @@
 						connaître leurs attentes en terme d'interface utilisateur,
 						de format de sortie des résultats...,
 					</br>Pour manifester votre intérêt et participer au projet, utilisez le formulaire d'inscription juste en dessous</li>
-					
+
 					<li>Il s'agit de co-construire avec ces professionnels,
 						mais aussi avec les auteurs de la note, ceux qui ne sont pas d'accord, avec vous,
 					une application en mode open-source et de l'adapter en mode agile aux besoins du terrain.</li>
 			</ul>
 		</div>
-		
-		<div class="card">
-			<div class="circle">N</div>ewsletter
-			<mailchimp-subscribe>			</mailchimp-subscribe> <!-- a revoir avec les parametres comme : https://github.com/PolymerLabs/built-with-polymer/search?utf8=%E2%9C%93&q=mailchimp -->
-		</div>
-		
-		<div class="card">
-			<div class="circle">T</div>utoriel
-			<h1> Tutoriel</h1>
-			
-			Apprenez à utiliser Pa-Comp en 4 minutes.
-			</br>
-			<google-youtube
-			video-id="5RBjF6_IqNw"
-			height="270px"
-			width="480px"
-			rel="0"
-			start="0"
-			autoplay="0">
-			</google-youtube>
-			
-		
-		</div>
-		
-		<a href="/view1"><paper-icon-button icon="image:navigate-next"  class="giant" on-tap="next"></paper-icon-button></a>
+
+
+
+		<a href="/tutoriel"><paper-icon-button icon="image:navigate-next"  class="giant" on-tap="next"></paper-icon-button></a>
 		</template>
-		
+
 		<script>
 		Polymer({
 		is: 'my-visite',
-		
+
 		});
 		</script>
 		</dom-module>
-				
