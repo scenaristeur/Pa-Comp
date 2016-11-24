@@ -28,10 +28,7 @@ twitter : [@dfaveris #smag0](https://twitter.com/intent/tweet?screen_name=DFaver
 - un désaccord sur le montant de la pension alimentaire
 - [une discussion sur openfisca](https://github.com/openfisca/openfisca-web-api/issues/54#issuecomment-251313747)
 
-En cours 
-ajout de testR.html dans public pour deduire le budget lié aux enfants basé sur [les budgets type l'UNAF](http://www.unaf.fr/spip.php?rubrique160) .
 
-utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning )
 
 
 
