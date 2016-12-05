@@ -1,0 +1,42 @@
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://cdn.opencpu.org/opencpu-0.4.js"></script>s
+<script>
+//The R function
+/*
+function(ticker = "GOOG", from = "2013-01-01", to=Sys.time()){
+  mydata <- yahoodata(ticker, from, to);
+  qplot(Date, Close, data = mydata, geom = c("line", "smooth"));
+}*/
+
+//JavaScript client code
+var ticker = $("#ticker").val();
+var req = $("#plotdiv").rplot("smoothplot", {
+    ticker : ticker,
+    from : "2013-01-01"
+})
+
+//optional: add custom callbacks
+req.fail(function(){
+    alert("R returned an error: " + req.responseText);
+});
+
+//set CORS to call "stocks" package on public server
+
+
+ocpu.seturl("//opencpu.ocpu.io/stocks/R")
+
+//call R function: stocks::smoothplot(ticker=ticker)
+$("#submitbutton").click(function(){
+    var ticker = $("#ticker").val();
+    var req = $("#plotdiv").rplot("smoothplot", {
+        ticker : ticker,
+        from : "2013-01-01"
+    });
+
+    //optional
+    req.fail(function(){
+        alert("R returned an error: " + req.responseText);
+    });
+});
+
+</script>
