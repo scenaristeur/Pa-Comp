@@ -9,12 +9,27 @@ var adultes = [2,2,1,2,2,2,2,1];
 var enfants = [2,0,2,2,0,1,1,0];
 var ados = [0,2,0,2,1,2,1,1];
 var budget = [2904,3322,2422,4167,2679,3688,3197,2221];
+var scripR2send ="df <- data.frame(adultes = c(2,2,1,2,2,2,2,1), enfants = c(2,0,2,2,0,1,1,0), ados = c(0,2,0,2,1,2,1,1), budget= c(2904,3322,2422,4167,2679,3688,3197,2221))";
+//scripR2send+="df";
+/*
+df.lm = lm( budget ~ adultes + enfants + ados , data=df)
+newdata = data.frame(adultes=1, enfants=2, ados=0)
+predict(df.lm, newdata)
+attach(df)
+plot(enfants,budget , xlim=c(0,8))
+abline(lm(budget~enfants), col="red")
+layout(matrix(c(1,2,3,4),2,2))
+plot(df)";*/
 ocpu.seturl("//public.opencpu.org/ocpu/library/data.table/R")
 var req = ocpu.call("data.table", { adultes: adultes, enfants: enfants, ados: ados, budget: budget },
   function(session)  {
     session.getObject(function(data)  {
     //  alert(data);
-    console.log(data)
+    console.log(data);
+
+//    ocpu.call(scripR2send);
+console.log(req);
+console.log(session);
     });
 });
 
