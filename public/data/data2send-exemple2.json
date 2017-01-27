@@ -5,7 +5,8 @@
 # https://pa-comp.firebaseapp.com/bower_components/openfisca-pension/outils/ ,
 # vous pouvez initialiser l'application Pa-Comp https://pa-comp.firebaseapp.com/ .
 # SUPPRIMEZ CES LIGNES DE COMMENTAIRE SI VOUS VOULEZ UTILISER CES DONNEES EN TANT QUE FICHIER JSON
-
+# exemple : 1,5 smic, 2 enfants moins de 14ans
+#(tableau 2 : http://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/note-31-cout-separation-ok.pdf)
 
 {
     "scenarios": [
@@ -18,8 +19,6 @@
                             "A"
                         ],
                         "enfants": [
-                            "L",
-                            "S",
                             "M",
                             "E"
                         ]
@@ -32,8 +31,6 @@
                             "A"
                         ],
                         "personnes_a_charge": [
-                            "L",
-                            "S",
                             "M",
                             "E"
                         ]
@@ -43,20 +40,12 @@
                     {
                         "id": "D",
                         "date_naissance": "1977-05-14",
-                        "salaire_imposable": "24000"
+                        "salaire_imposable": "19296"
                     },
                     {
                         "id": "A",
                         "date_naissance": "1978-10-11",
-                        "salaire_imposable": "24000"
-                    },
-                    {
-                        "id": "L",
-                        "date_naissance": "2000-08-23"
-                    },
-                    {
-                        "id": "S",
-                        "date_naissance": "2004-07-02"
+                        "salaire_imposable": "19296"
                     },
                     {
                         "id": "M",
@@ -71,8 +60,6 @@
                     {
                         "personne_de_reference": "D",
                         "enfants": [
-                            "L",
-                            "S",
                             "M",
                             "E"
                         ],
@@ -82,7 +69,7 @@
                     }
                 ]
             },
-            "period": "2016"
+            "period": "2013"
         },
         {
             "test_case": {
@@ -106,7 +93,7 @@
                     {
                         "id": "D",
                         "date_naissance": "1977-05-14",
-                        "salaire_imposable": "24000"
+                        "salaire_imposable": "19296"
                     }
                 ],
                 "menages": [
@@ -118,7 +105,7 @@
                     }
                 ]
             },
-            "period": "2016"
+            "period": "2013"
         },
         {
             "test_case": {
@@ -128,8 +115,6 @@
                             "A"
                         ],
                         "enfants": [
-                            "L",
-                            "S",
                             "M",
                             "E"
                         ]
@@ -141,8 +126,6 @@
                             "A"
                         ],
                         "personnes_a_charge": [
-                            "L",
-                            "S",
                             "M",
                             "E"
                         ]
@@ -152,15 +135,7 @@
                     {
                         "id": "A",
                         "date_naissance": "1978-10-11",
-                        "salaire_imposable": "24000"
-                    },
-                    {
-                        "id": "L",
-                        "date_naissance": "2000-08-23"
-                    },
-                    {
-                        "id": "S",
-                        "date_naissance": "2004-07-02"
+                        "salaire_imposable": "19296"
                     },
                     {
                         "id": "M",
@@ -175,8 +150,6 @@
                     {
                         "personne_de_reference": "A",
                         "enfants": [
-                            "L",
-                            "S",
                             "M",
                             "E"
                         ],
