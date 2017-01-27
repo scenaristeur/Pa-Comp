@@ -36,9 +36,8 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
 # JEU DE DONNEES example
 
 ```
-
-# Ce fichier représente le fichier json typique à envoyer à OpenFisca
-# afin d'obtenir une réponse correcte dans l'application Pa-Comp.
+# Ce fichier repr�sente le fichier json typique � envoyer � OpenFisca
+# afin d'obtenir une r�ponse correcte dans l'application Pa-Comp.
 #
 # En copiant le json ci-dessous, et le collant dans l'"Outils OpenFisca"
 # https://pa-comp.firebaseapp.com/bower_components/openfisca-pension/outils/ ,
@@ -228,17 +227,16 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
         }
     ],
     "variables": [
-        "revdisp",
-        "revini",
+        "revenu_disponible",
+        "revenu_initial",
         "traitements_salaires_pensions_rentes",
-        "nivvie_net",
         "irpp",
-        "mini",
-        "nivvie_net",
+        "minima_sociaux",
+        "niveau_de_vie_net",
         "uc",
         "rsa",
-        "psoc",
-        "pfam",
+        "prestations_sociales",
+        "prestations_familiales",
         "aides_logement",
         "csg",
         "aides_logement",
