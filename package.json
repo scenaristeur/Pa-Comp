@@ -1,7 +1,8 @@
 {
-  "name": "smag0uiserver",
+  "name": "Pa-Comp",
   "version": "1.0.0",
-  "description": "un serveur de base pour le projet Smag0, sur lequel on greffe les modules qui nous intéressent, Thérèse.",
+  "description": "Estimation de l'incidence d'un divorce ou d'une séparation sur le budget d'un couple. Calcul des pensions alimentaires.
+                Pa-Comp ? c’est pas con !",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

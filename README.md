@@ -1,7 +1,5 @@
 # Pa-Comp
 
-# Raison d'être :
-<center>
 ```
 Estimation de l'incidence d'un divorce ou d'une séparation sur le budget d'un couple.
 
@@ -10,13 +8,17 @@ Calcul des pensions alimentaires.
 Pa-Comp ? c’est pas con !
 
 ```
-</center>
 
-# Utiliser Pa-Comp :
+
+# Utiliser Pa-Comp
 - https://pa-comp.firebaseapp.com/
 
-#Tutoriel :
+#Tutoriel
  [![Tutoriel Pa-Comp](http://img.youtube.com/vi/5RBjF6_IqNw/0.jpg)](http://www.youtube.com/watch?v=5RBjF6_IqNw)
+
+# Question & suggestions
+- [twiiter @dfaveris](https://twitter.com/intent/tweet?screen_name=DFaveris&text=%23Pa-Comp)
+- [github issues](https://github.com/scenaristeur/Pa-Comp/issues)
 
 # Installation en local
 - necessite [nodejs](https://nodejs.org/en/), et [bower](https://bower.io/#install-bower)
