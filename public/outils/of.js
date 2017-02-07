@@ -27,7 +27,22 @@ var data=  {
       "period": "2016"
     }
   ],
-  "variables": ["revdisp","irpp","rsa","pfam","nivvie"]
+  "variables": [
+      "revenu_disponible",
+      "revenu_initial",
+      "traitements_salaires_pensions_rentes",
+      "niveau_de_vie_net",
+      "irpp",
+      "minima_sociaux",
+      "uc",
+      "rsa",
+      "prestations_sociales",
+      "prestations_familiales",
+      "csg",
+      "aides_logement",
+      "salaire_imposable",
+      "csg"
+  ]
 };
 
 
@@ -68,12 +83,12 @@ var url = "https://api.openfisca.fr/api/1/calculate";
 http.onreadystatechange = function() {//Call a function when the state changes.
     if(http.readyState == 4 && http.status == 200) {
         console.log(http.responseText);
-        var myArr = JSON.parse(http.responseText); 
+        var myArr = JSON.parse(http.responseText);
        // console.log(myArr);
         console.log("requete OK");
         affiche(myArr);
     }else{
-		afficheError(http.responseText);    
+		afficheError(http.responseText);
     }
 }
 
@@ -85,5 +100,3 @@ function launchQuery(){
 	http.setRequestHeader("Content-type", "application/json");
 	http.send(dataSend);
 }
-
-

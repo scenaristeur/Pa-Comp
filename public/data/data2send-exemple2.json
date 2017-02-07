@@ -1,76 +1,12 @@
-# Pa-Comp
-
-# Raison d'être :
-<center>
-```
-Estimation de l'incidence d'un divorce ou d'une séparation sur le budget d'un couple.
-
-Calcul des pensions alimentaires.
-
-Pa-Comp ? c’est pas con !
-
-```
-</center>
-
-# Utiliser Pa-Comp :
-- https://pa-comp.firebaseapp.com/
-
-#Tutoriel :
-- [![Tutoriel Pa-Comp](http://img.youtube.com/vi/5RBjF6_IqNw/0.jpg)](http://www.youtube.com/watch?v=5RBjF6_IqNw)
-
-# Installation en local
-- necessite nodejs, npm, bower
-
-```
-git clone https://github.com/scenaristeur/Pa-Comp.git Pa-Comp
-cd Pa-Comp
-npm install
-cd public
-bower install
-cd ..
-node .
-```
-- clonage du repertoire Pa-Comp depuis github dans un sous répertoire Pa-Comp
-- déplacement dans ce dossier
-- installation des dépendances 'node.js' avec 'npm'
-- déplacement dans le répertoire 'public'
-- installation des éléments Polymer 1
-- retour à la racine
-- lancement de 'node' dans ce répertoire
-- il ne vous reste plus qu'à appuyer sur 'Entrée'
-- et votre console devrait vous indiquer que le serveur écoute sur le port 3000
-- ce qui signifie qu'il accessible à l'adresse http://127.0.0.1:3000 ou http://localhost:3000
-
-# Utilise l'API-WEB d'OpenFisca
-
-- [OpenFisca](https://www.openfisca.fr/)
-
-# Basé sur l'élément Polymer 1
-
- - [openfisca-pension](https://github.com/scenaristeur/openfisca-pension)
-
-# A l'origine du projet
-- un désaccord sur le montant de la pension alimentaire
-- [une note de France Stratégie](http://www.strategie.gouv.fr/publications/partager-charges-liees-aux-enfants-apres-une-separation)
-- [une discussion sur openfisca](https://github.com/openfisca/openfisca-web-api/issues/54#issuecomment-251313747)
-
-# En cours
-- ajout de testR.html dans public pour deduire le budget lié aux enfants basé sur [les budgets type l'UNAF](http://www.unaf.fr/spip.php?rubrique160) .
-
-utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning )
-
-# JEU DE DONNEES example
-
-```
-
-# Ce fichier représente le fichier json typique à envoyer à OpenFisca
-# afin d'obtenir une réponse correcte dans l'application Pa-Comp.
+# Ce fichier repr�sente le fichier json typique � envoyer � OpenFisca
+# afin d'obtenir une r�ponse correcte dans l'application Pa-Comp.
 #
 # En copiant le json ci-dessous, et le collant dans l'"Outils OpenFisca"
 # https://pa-comp.firebaseapp.com/bower_components/openfisca-pension/outils/ ,
 # vous pouvez initialiser l'application Pa-Comp https://pa-comp.firebaseapp.com/ .
 # SUPPRIMEZ CES LIGNES DE COMMENTAIRE SI VOUS VOULEZ UTILISER CES DONNEES EN TANT QUE FICHIER JSON
-
+# exemple : 1,5 smic, 2 enfants moins de 14ans
+#(tableau 2 : http://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/note-31-cout-separation-ok.pdf)
 
 {
     "scenarios": [
@@ -83,8 +19,6 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                             "A"
                         ],
                         "enfants": [
-                            "L",
-                            "S",
                             "M",
                             "E"
                         ]
@@ -97,8 +31,6 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                             "A"
                         ],
                         "personnes_a_charge": [
-                            "L",
-                            "S",
                             "M",
                             "E"
                         ]
@@ -108,20 +40,12 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                     {
                         "id": "D",
                         "date_naissance": "1977-05-14",
-                        "salaire_imposable": "24000"
+                        "salaire_imposable": "19296"
                     },
                     {
                         "id": "A",
                         "date_naissance": "1978-10-11",
-                        "salaire_imposable": "24000"
-                    },
-                    {
-                        "id": "L",
-                        "date_naissance": "2000-08-23"
-                    },
-                    {
-                        "id": "S",
-                        "date_naissance": "2004-07-02"
+                        "salaire_imposable": "19296"
                     },
                     {
                         "id": "M",
@@ -136,8 +60,6 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                     {
                         "personne_de_reference": "D",
                         "enfants": [
-                            "L",
-                            "S",
                             "M",
                             "E"
                         ],
@@ -147,7 +69,7 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                     }
                 ]
             },
-            "period": "2016"
+            "period": "2013"
         },
         {
             "test_case": {
@@ -171,7 +93,7 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                     {
                         "id": "D",
                         "date_naissance": "1977-05-14",
-                        "salaire_imposable": "24000"
+                        "salaire_imposable": "19296"
                     }
                 ],
                 "menages": [
@@ -183,7 +105,7 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                     }
                 ]
             },
-            "period": "2016"
+            "period": "2013"
         },
         {
             "test_case": {
@@ -193,8 +115,6 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                             "A"
                         ],
                         "enfants": [
-                            "L",
-                            "S",
                             "M",
                             "E"
                         ]
@@ -206,8 +126,6 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                             "A"
                         ],
                         "personnes_a_charge": [
-                            "L",
-                            "S",
                             "M",
                             "E"
                         ]
@@ -217,15 +135,7 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                     {
                         "id": "A",
                         "date_naissance": "1978-10-11",
-                        "salaire_imposable": "24000"
-                    },
-                    {
-                        "id": "L",
-                        "date_naissance": "2000-08-23"
-                    },
-                    {
-                        "id": "S",
-                        "date_naissance": "2004-07-02"
+                        "salaire_imposable": "19296"
                     },
                     {
                         "id": "M",
@@ -240,8 +150,6 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                     {
                         "personne_de_reference": "A",
                         "enfants": [
-                            "L",
-                            "S",
                             "M",
                             "E"
                         ],
@@ -250,7 +158,7 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                     }
                 ]
             },
-            "period": "2016"
+            "period": "2013"
         }
     ],
     "variables": [
@@ -270,5 +178,3 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
         "csg"
     ]
 }
-
-```

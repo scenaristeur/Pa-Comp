@@ -1,8 +1,8 @@
 <html>
 TEST OPENCPU EN JS
 voir la console js , exemples a http://jsfiddle.net/user/opencpu/fiddles/
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://cdn.opencpu.org/opencpu-0.4.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.opencpu.org/opencpu-0.4.js"></script>
 <script>
 
 var adultes = [2,2,1,2,2,2,2,1];
@@ -20,8 +20,8 @@ plot(enfants,budget , xlim=c(0,8))
 abline(lm(budget~enfants), col="red")
 layout(matrix(c(1,2,3,4),2,2))
 plot(df)";*/
-ocpu.seturl("//public.opencpu.org/ocpu/library/data.table/R")
-var req = ocpu.call("data.table", { adultes: adultes, enfants: enfants, ados: ados, budget: budget },
+ocpu.seturl("//public.opencpu.org/ocpu/library/data.frame/R")
+var req = ocpu.call("data.frame", { adultes: adultes, enfants: enfants, ados: ados, budget: budget },
   function(session)  {
     session.getObject(function(data)  {
     //  alert(data);
@@ -42,7 +42,7 @@ var req = ocpu.rpc("sd",{
     x : mydata
 }, function(output){
     alert("Standard Deviation equals: " + output);
-    
+
 });
 
 //optional
