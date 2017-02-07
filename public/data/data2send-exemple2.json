@@ -158,20 +158,34 @@
                     }
                 ]
             },
+<<<<<<< HEAD
             "period": "2013"
+=======
+            "period": "2016"
+>>>>>>> 8c9851a32214c14aa6378560d08f6ea9c6d3bb17
         }
     ],
     "variables": [
         "revenu_disponible",
         "revenu_initial",
         "traitements_salaires_pensions_rentes",
+<<<<<<< HEAD
         "niveau_de_vie_net",
         "irpp",
         "minima_sociaux",
+=======
+        "irpp",
+        "minima_sociaux",
+        "niveau_de_vie_net",
+>>>>>>> 8c9851a32214c14aa6378560d08f6ea9c6d3bb17
         "uc",
         "rsa",
         "prestations_sociales",
         "prestations_familiales",
+<<<<<<< HEAD
+=======
+        "aides_logement",
+>>>>>>> 8c9851a32214c14aa6378560d08f6ea9c6d3bb17
         "csg",
         "aides_logement",
         "salaire_imposable",
