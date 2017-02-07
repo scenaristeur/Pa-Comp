@@ -16,10 +16,10 @@ Pa-Comp ? c’est pas con !
 - https://pa-comp.firebaseapp.com/
 
 #Tutoriel :
-- [![Tutoriel Pa-Comp](http://img.youtube.com/vi/5RBjF6_IqNw/0.jpg)](http://www.youtube.com/watch?v=5RBjF6_IqNw)
+ [![Tutoriel Pa-Comp](http://img.youtube.com/vi/5RBjF6_IqNw/0.jpg)](http://www.youtube.com/watch?v=5RBjF6_IqNw)
 
 # Installation en local
-- necessite nodejs, npm, bower
+- necessite [nodejs](https://nodejs.org/en/), et [bower](https://bower.io/#install-bower)
 
 ```
 git clone https://github.com/scenaristeur/Pa-Comp.git Pa-Comp
@@ -30,6 +30,14 @@ bower install
 cd ..
 node .
 ```
+ou en une seulle ligne :
+
+```
+git clone https://github.com/scenaristeur/Pa-Comp.git Pa-Comp && cd Pa-Comp && npm install && cd public && bower install && cd .. && node .
+
+```
+
+Détail de l'installation :
 - clonage du repertoire Pa-Comp depuis github dans un sous répertoire Pa-Comp
 - déplacement dans ce dossier
 - installation des dépendances 'node.js' avec 'npm'
@@ -43,10 +51,11 @@ node .
 
 # Utilise l'API-WEB d'OpenFisca
 
-- [OpenFisca](https://www.openfisca.fr/)
+- [OpenFisca](https://www.openfisca.fr/) ( https://api.openfisca.fr/ )
 
-# Basé sur l'élément Polymer 1
+# Basé sur la plateforme Polymer 1
 
+  - [Polymer 1](https://www.polymer-project.org/1.0/)
  - [openfisca-pension](https://github.com/scenaristeur/openfisca-pension)
 
 # A l'origine du projet
@@ -59,15 +68,18 @@ node .
 
 utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning )
 
-# JEU DE DONNEES example
+# Exemple de jeux de données au format JSON
+
+ ( d'autres exemples sont disponibles dans /public/data )
 
 ```
-# Ce fichier repr�sente le fichier json typique � envoyer � OpenFisca
-# afin d'obtenir une r�ponse correcte dans l'application Pa-Comp.
+# SUPPRIMEZ CES LIGNES DE COMMENTAIRE SI VOUS VOULEZ UTILISER CES DONNEES EN TANT QUE FICHIER JSON
+# Ce fichier représente le fichier json typique à envoyer à OpenFisca via une requête POST
+# afin d'obtenir une réponse correcte dans l'application Pa-Comp.
 #
 # En copiant le json ci-dessous, et le collant dans l'"Outils OpenFisca"
 # https://pa-comp.firebaseapp.com/bower_components/openfisca-pension/outils/ ,
-# vous pouvez initialiser l'application Pa-Comp https://pa-comp.firebaseapp.com/ .
+# vous pouvez initialiser l'application Pa-Comp https://pa-comp.firebaseapp.com/ avec ces données.
 # SUPPRIMEZ CES LIGNES DE COMMENTAIRE SI VOUS VOULEZ UTILISER CES DONNEES EN TANT QUE FICHIER JSON
 
 
@@ -256,23 +268,13 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
         "revenu_disponible",
         "revenu_initial",
         "traitements_salaires_pensions_rentes",
-<<<<<<< HEAD
         "niveau_de_vie_net",
         "irpp",
         "minima_sociaux",
-=======
-        "irpp",
-        "minima_sociaux",
-        "niveau_de_vie_net",
->>>>>>> 8c9851a32214c14aa6378560d08f6ea9c6d3bb17
         "uc",
         "rsa",
         "prestations_sociales",
         "prestations_familiales",
-<<<<<<< HEAD
-=======
-        "aides_logement",
->>>>>>> 8c9851a32214c14aa6378560d08f6ea9c6d3bb17
         "csg",
         "aides_logement",
         "salaire_imposable",
