@@ -92,82 +92,61 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                 "familles": [
                     {
                         "parents": [
-                            "D",
-                            "A"
+                            "père",
+                            "mère"
                         ],
                         "enfants": [
-                            "L",
-                            "S",
-                            "M",
-                            "E"
+                            "enfant 1"
                         ]
                     }
                 ],
                 "foyers_fiscaux": [
                     {
                         "declarants": [
-                            "D",
-                            "A"
+                            "père",
+                            "mère"
                         ],
                         "personnes_a_charge": [
-                            "L",
-                            "S",
-                            "M",
-                            "E"
+                            "enfant 1"
                         ]
                     }
                 ],
                 "individus": [
                     {
-                        "id": "D",
+                        "id": "père",
                         "date_naissance": "1977-05-14",
                         "salaire_imposable": "24000"
                     },
                     {
-                        "id": "A",
+                        "id": "mère",
                         "date_naissance": "1978-10-11",
-                        "salaire_imposable": "24000"
+                        "salaire_imposable": "23000"
                     },
                     {
-                        "id": "L",
+                        "id": "enfant 1",
                         "date_naissance": "2000-08-23"
-                    },
-                    {
-                        "id": "S",
-                        "date_naissance": "2004-07-02"
-                    },
-                    {
-                        "id": "M",
-                        "date_naissance": "2007-02-08"
-                    },
-                    {
-                        "id": "E",
-                        "date_naissance": "2011-01-28"
                     }
                 ],
                 "menages": [
                     {
-                        "personne_de_reference": "D",
+                        "personne_de_reference": "père",
                         "enfants": [
-                            "L",
-                            "S",
-                            "M",
-                            "E"
+                            "enfant 1"
                         ],
                         "loyer": "1000",
-                        "conjoint": "A",
+                        "conjoint": "mère",
                         "statut_occupation_logement": 4
                     }
                 ]
             },
-            "period": "2016"
+            "period": "2015"
         },
         {
             "test_case": {
                 "familles": [
                     {
                         "parents": [
-                            "D"
+                            "père"
                         ],
                         "enfants": []
                     }
@@ -175,112 +154,86 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
                 "foyers_fiscaux": [
                     {
                         "declarants": [
-                            "D"
+                            "père"
                         ],
                         "personnes_a_charge": []
                     }
                 ],
                 "individus": [
                     {
-                        "id": "D",
+                        "id": "père",
                         "date_naissance": "1977-05-14",
                         "salaire_imposable": "24000"
                     }
                 ],
                 "menages": [
                     {
-                        "personne_de_reference": "D",
+                        "personne_de_reference": "père",
                         "enfants": [],
                         "loyer": "530",
                         "statut_occupation_logement": 3
                     }
                 ]
             },
-            "period": "2016"
+            "period": "2015"
         },
         {
             "test_case": {
                 "familles": [
                     {
                         "parents": [
-                            "A"
+                            "mère"
                         ],
                         "enfants": [
-                            "L",
-                            "S",
-                            "M",
-                            "E"
+                            "enfant 1"
                         ]
                     }
                 ],
                 "foyers_fiscaux": [
                     {
                         "declarants": [
-                            "A"
+                            "mère"
                         ],
                         "personnes_a_charge": [
-                            "L",
-                            "S",
-                            "M",
-                            "E"
+                            "enfant 1"
                         ]
                     }
                 ],
                 "individus": [
                     {
-                        "id": "A",
+                        "id": "mère",
                         "date_naissance": "1978-10-11",
-                        "salaire_imposable": "24000"
+                        "salaire_imposable": "23000"
                     },
                     {
-                        "id": "L",
+                        "id": "enfant 1",
                         "date_naissance": "2000-08-23"
-                    },
-                    {
-                        "id": "S",
-                        "date_naissance": "2004-07-02"
-                    },
-                    {
-                        "id": "M",
-                        "date_naissance": "2007-02-08"
-                    },
-                    {
-                        "id": "E",
-                        "date_naissance": "2011-01-28"
                     }
                 ],
                 "menages": [
                     {
-                        "personne_de_reference": "A",
+                        "personne_de_reference": "mère",
                         "enfants": [
-                            "L",
-                            "S",
-                            "M",
-                            "E"
+                            "enfant 1"
                         ],
                         "loyer": "680",
                         "statut_occupation_logement": 4
                     }
                 ]
             },
-            "period": "2016"
+            "period": "2015"
         }
     ],
     "variables": [
         "revenu_disponible",
-        "revenu_initial",
-        "traitements_salaires_pensions_rentes",
         "niveau_de_vie_net",
         "irpp",
+         "uc",
         "minima_sociaux",
-        "uc",
-        "rsa",
-        "prestations_sociales",
         "prestations_familiales",
-        "csg",
+         "csg",
         "aides_logement",
-        "salaire_imposable",
-        "csg"
+        "salaire_imposable"
     ]
 }
 
