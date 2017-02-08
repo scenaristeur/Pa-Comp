@@ -1,5 +1,5 @@
-# Ce fichier repr�sente le fichier json typique � envoyer � OpenFisca
-# afin d'obtenir une r�ponse correcte dans l'application Pa-Comp.
+# Ce fichier représente le fichier json typique à envoyer à OpenFisca
+# afin d'obtenir une réponse correcte dans l'application Pa-Comp.
 #
 # En copiant le json ci-dessous, et le collant dans l'"Outils OpenFisca"
 # https://pa-comp.firebaseapp.com/bower_components/openfisca-pension/outils/ ,
@@ -161,20 +161,17 @@
             "period": "2016"
         }
     ],
-    "variables": [
+ "variables": [
         "revenu_disponible",
-        "revenu_initial",
-        "traitements_salaires_pensions_rentes",
         "niveau_de_vie_net",
         "irpp",
+         "uc",
         "minima_sociaux",
-        "uc",
-        "rsa",
-        "prestations_sociales",
         "prestations_familiales",
-        "csg",
+        "prestations_sociales",
+         "csg",
         "aides_logement",
         "salaire_imposable",
-        "csg"
+        "revenu_initial"
     ]
 }
