@@ -84,7 +84,6 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
 # vous pouvez initialiser l'application Pa-Comp https://pa-comp.firebaseapp.com/ avec ces données.
 # SUPPRIMEZ CES LIGNES DE COMMENTAIRE SI VOUS VOULEZ UTILISER CES DONNEES EN TANT QUE FICHIER JSON
 
-
 {
     "scenarios": [
         {
@@ -231,9 +230,11 @@ utilise [langage R](https://www.r-project.org/) en javascript ( Machine Learning
          "uc",
         "minima_sociaux",
         "prestations_familiales",
+        "prestations_sociales",
          "csg",
         "aides_logement",
-        "salaire_imposable"
+        "salaire_imposable",
+        "revenu_initial"
     ]
 }
 
