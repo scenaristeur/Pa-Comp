@@ -1,5 +1,5 @@
-# Ce fichier repr�sente le fichier json typique � envoyer � OpenFisca
-# afin d'obtenir une r�ponse correcte dans l'application Pa-Comp.
+# Ce fichier représente le fichier json typique à envoyer à OpenFisca
+# afin d'obtenir une réponse correcte dans l'application Pa-Comp.
 #
 # En copiant le json ci-dessous, et le collant dans l'"Outils OpenFisca"
 # https://pa-comp.firebaseapp.com/bower_components/openfisca-pension/outils/ ,
