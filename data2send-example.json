@@ -187,20 +187,17 @@
             "period": "2016"
         }
     ],
-    "variables": [
+ "variables": [
         "revenu_disponible",
-        "revenu_initial",
-        "traitements_salaires_pensions_rentes",
         "niveau_de_vie_net",
         "irpp",
+         "uc",
         "minima_sociaux",
-        "uc",
-        "rsa",
-        "prestations_sociales",
         "prestations_familiales",
-        "csg",
+        "prestations_sociales",
+         "csg",
         "aides_logement",
         "salaire_imposable",
-        "csg"
+        "revenu_initial"
     ]
 }
